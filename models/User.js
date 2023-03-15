@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
-const User = require("./User");
-const Thoughts = require('./Thoughts')
+const Thoughts = require("./Thoughts");
 
 //schema to create username
 const userSchema = new Schema({
@@ -19,13 +18,13 @@ const userSchema = new Schema({
   },
   thoughts: [{
     type: Schema.Types.ObjectId,
-    ref: 'Thought'
+    ref: "Thought"
   }],
   friends: [{
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: "User"
   }]
 });
-const User = model("user", userSchema);
 
-model.exports = User;
+module.exports = model("User", userSchema);
+
