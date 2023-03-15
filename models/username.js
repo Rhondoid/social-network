@@ -1,0 +1,4 @@
+// ○ String
+// ○ Unique
+// ○ Required
+// Trimmed
